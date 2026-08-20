@@ -55,10 +55,10 @@
   --accent-foreground: 36 40% 95%;
   --destructive: 10 68% 55%;
   --destructive-foreground: 36 40% 95%;
-  --app-font-sans: 'Avenir Next', 'Gill Sans', 'Trebuchet MS', sans-serif;
-  --app-font-serif: 'Iowan Old Style', 'Baskerville', 'Book Antiqua', Georgia, serif;
-  --app-font-mono: 'SFMono-Regular', Consolas, 'Liberation Mono', monospace;
-  --radius: 0.25rem;
+  --app-font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --app-font-serif: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+  --app-font-mono: 'SFMono-Regular', ui-monospace, Menlo, Consolas, monospace;
+  --radius: 0.5rem;
   --shadow-soft: 0 18px 45px hsl(158 30% 16% / 0.09);
   --shadow-ink: 0 10px 30px hsl(158 30% 16% / 0.16);
   --sidebar: 36 33% 91%;
@@ -114,7 +114,7 @@
 }
 
 @layer utilities {
-  .font-display { font-family: var(--app-font-serif); }
+  .font-display { font-family: var(--app-font-sans); font-weight: 700; }
   .font-mono-ui { font-family: var(--app-font-mono); }
   .text-balance { text-wrap: balance; }
 }
@@ -127,14 +127,14 @@
   inset: 0;
   pointer-events: none;
   z-index: 50;
-  opacity: .045;
+  opacity: .018;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
 }
-.eyebrow { letter-spacing: .15em; text-transform: uppercase; font-size: .67rem; font-weight: 700; }
-.display-xl { font-size: clamp(3.6rem, 8.3vw, 8.7rem); line-height: .88; letter-spacing: -.055em; }
-.display-lg { font-size: clamp(3rem, 6.5vw, 6.8rem); line-height: .9; letter-spacing: -.052em; }
-.display-md { font-size: clamp(2.4rem, 4.4vw, 4.6rem); line-height: .94; letter-spacing: -.045em; }
-.serif-italic { font-style: italic; font-weight: 400; }
+.eyebrow { letter-spacing: .12em; text-transform: uppercase; font-size: .67rem; font-weight: 800; }
+.display-xl { font-size: clamp(3.5rem, 8vw, 8.4rem); line-height: .91; letter-spacing: -.075em; font-weight: 800; }
+.display-lg { font-size: clamp(3rem, 6.2vw, 6.6rem); line-height: .93; letter-spacing: -.07em; font-weight: 800; }
+.display-md { font-size: clamp(2.4rem, 4.2vw, 4.5rem); line-height: .98; letter-spacing: -.065em; font-weight: 800; }
+.serif-italic { font-style: italic; font-weight: 800; }
 .hairline { border-color: rgba(29, 58, 47, .2); }
 .marquee { animation: marquee 24s linear infinite; }
 .reveal { opacity: 0; transform: translateY(20px); transition: opacity .75s ease, transform .75s ease; }
