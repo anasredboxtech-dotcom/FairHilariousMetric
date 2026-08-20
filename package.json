@@ -9,10 +9,7 @@
   },
   "private": true,
   "dependencies": {
-    "@radix-ui/react-tooltip": "^1.1.8",
-    "@replit/connectors-sdk": "^0.4.1",
-    "clsx": "^2.1.1",
-    "tailwind-merge": "^2.6.0"
+    "@replit/connectors-sdk": "^0.4.1"
   },
   "devDependencies": {
     "prettier": "^3.9.6",
