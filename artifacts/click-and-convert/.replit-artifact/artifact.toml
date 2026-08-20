@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Click & Convert"
+description = "A polished marketing website for Click & Convert, a paid Meta ads and digital marketing agency with an editorial old-world visual identity and refined modern typography."
+version = "1.0.0"
+id = "artifacts/click-and-convert"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20354
+
+[services.development]
+run = "pnpm --filter @workspace/click-and-convert run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/click-and-convert", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/click-and-convert/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20354"
+BASE_PATH = "/"
